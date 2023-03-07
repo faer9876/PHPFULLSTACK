@@ -2,13 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap');
         html {
             font-family: 'Tilt Prism', cursive;
- 
+            /* 굴림이 없을시 바탕 적용 */
+            font-family: '굴림','바탕';
         }
     body {
         font-family: 'Tilt Prism', cursive;
 
     }
-
+        /* 적확한 픽셀 수를 파악하기 힘들어서 사용x */
         .p1 {
             font-size: medium;
         }
