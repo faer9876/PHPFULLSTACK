@@ -1,0 +1,67 @@
+/* 전체 박스 가운데 정렬 및 크기 설정 */
+#container {
+    width: 640px;
+    margin: 0px auto;
+}
+/* 첫번째 박스 스타일 */
+.box_1 {
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border: 1px dotted #000;
+    margin: 20px auto;
+    padding: 20px;
+    margin-right: 80px;
+}
+/* 두번째 박스 스타일 */
+.box_2 {
+    border: 1px dotted #000;
+    margin: 20px auto;
+    padding: 20px;
+    margin-right: 80px;
+}
+/* 세번째 박스 스타일 */
+.box_3 {
+    border: 1px dotted #000;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    margin: 20px auto;
+    padding: 20px;
+    margin-right: 80px;
+}
+/* 폰트가 굵은 경우 */
+.font_1 {
+    font-weight: bold;
+}
+/* 폰트가 기울어져 있던 경우 */
+.font_2 {
+    font-style: italic;
+}
+/* ul속성을 숫자로 바꿈 */
+ul {
+    list-style-type: decimal;
+}
+/* 표 속성 스타일 */
+table{
+    text-align: center;
+    border: 1px solid #000;
+    border-collapse: collapse;
+}
+/* 표 가로세로 스타일 설정 */
+th,td{
+    text-align: left;
+    border: 1px solid #000;
+    border-collapse: collapse;
+    padding: 10px;
+}
+/* th 왼쪽 정렬 */
+th {
+    text-align: center;
+}
+/* 표 안에 배경 컬러 설정 */
+.col {
+    background-color: #eee;
+}
+/* 표 넓이 설정 */
+.col_w {
+    width: 150px;
+}

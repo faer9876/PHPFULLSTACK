@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 세로 정렬을 가로로 만들어 줄때 inline block쓴다 생각 -->
+    <style>
+        /* width,height는 block tag만 inline에 적용하면 적용x */
+        .art_1 {
+            border: 3px solid red;
+            /* 영역 자체가 사라짐 특정 버튼을 누르면 내용이 사라지고 나타날 때 사용 */
+            /* 밑에 있는게 사라진 영역으로 올라감 */
+            display: none;
+        }
+        div {
+            border: 3px solid orange;
+        }
+        span {
+            border: 3px solid black;
+        }
+        /* 클래스 art_2안에 있는 div만 적용 */
+        .art_2>div,
+        .art_2>span {
+            display: inline-block;
+        /* 이 경우에 span 도 적용되는 이유는 inline-block이 적용 되어서 */
+            width: 150px;
+            height: 150px;
+        }
+        .wh {
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <article class="art_2">
+        <div>div Tag1</div>
+        <div>div Tag2</div>
+        <div>div Tag3</div>
+        <span>span1</span>
+        <span>span2</span>
+        <span>span3</span>
+    </article>
+    <br>
+    <br>
+    
+
+    <div class="wh">테스트 div1</div>
+    <span class="wh">테스트 wh1</span>
+
+    <!-- 영역 구분을 위한 tag article -->
+    <!-- <article class="art_1">
+        <h1>Display None</h1>
+        <div>div Tag1</div>
+        <div>div Tag</div>
+    </article>
+
+    <div class="div_2">div Tag2</div>
+    <h1>h1</h1>
+    <p>p</p>
+
+    <span>span</span>
+    <a href="">a</a> -->
+</body>   
+</html>
