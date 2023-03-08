@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* head는 내용이 아닌 설정이 담김
+        body에만 내용이 담김 */
+        .div_img {
+            background-image: url("./css/img/곰.jpg"), url("./img/캡처.jpg");
+            width: 650px;
+            height: 800px;
+        }
+        .div_repeat {
+            border: 1px solid black;
+            background-image: url("./css/img/곰.jpg"), url("./img/캡처.jpg");
+            width: 1000px;
+            height: 1000px;
+        }
+        .div_position {
+            background-image: url("./css/img/곰.jpg"), url("./img/캡처.jpg");
+            /* 첫번째 왼쪽 기준으로 
+            두번째 위아래 기준*/
+            /* background-position: 10% 75%; */
+            /* background-position: bottom 100px right 50px; */
+            background-repeat: no-repeat;
+            border: 1px solid black;
+            width: 1000px;
+            height: 1000px;
+            /* size는 auto가 default 
+            cover contain 차이는 contain은 빈 공간도 채워줌*/
+            background-size: cover;
+        }
+        .at_img {
+            background-image: url('./css/img/곰.jpg');
+            width: 150px;
+            height: 200px;
+            display: inline-block;
+            border: 1px solid black;
+            /* 넘치는 영역을 스크롤로 변경 */
+            overflow: scroll;
+            background-size: 80%;
+        }
+        /* 사진 고정 wiewport움직이더라도 뒤 사진 고정*/
+        .div_img_scroll {
+            background-attachment: scroll;
+        }
+        /* 일반 scroll에서는 사진 고정,viewport따라 뒤 사진 움직임 */
+        .div_img_fixed {
+            background-attachment: fixed;
+        }
+        /* 그냥 scroll에서 뒤 사진도 움직임 */
+        .div_img_local {
+            background-attachment: local;
+        }
+    </style>
+</head>
+<!-- <body class="div_repeat"> -->
+<body>
+    <!-- <div>
+        <h1>background-position</h1>
+        <div class="div_position"></div>
+    </div> -->
+<div style="height: 200px;"></div>
+    <div class="div_img_scroll at_img">구체적으로 보면 이건희 일가가 삼성물산 지분 33.26%를 보유하고있으며, 이건희와 삼성물산은 삼성생명의 1, 2대주주이다. 삼성생명은 삼성전자를 비롯한 많은 계열사들의 지분을 가지고 있다. 삼성그룹은 순환출자를 유지해오다가 2018년 모두해소하였다. 순환출자 구조는 1970년대에 시작된 정부 주도하의 대기업 중심의 경제 성장 추진에서 불가피하게 만들어진 결과라고 보는 견해가 있다. 과세상의 몇 가지 문제와 조세포탈 등, 약간의 책임만 해결하면 오히려 삼성으로서는 출자·승계 구도를 완벽하게 합법화하고 법적으로 인정받게 된다.[3]</div>
+    <div class="div_img_fixed at_img">구체적으로 보면 이건희 일가가 삼성물산 지분 33.26%를 보유하고있으며, 이건희와 삼성물산은 삼성생명의 1, 2대주주이다. 삼성생명은 삼성전자를 비롯한 많은 계열사들의 지분을 가지고 있다. 삼성그룹은 순환출자를 유지해오다가 2018년 모두해소하였다. 순환출자 구조는 1970년대에 시작된 정부 주도하의 대기업 중심의 경제 성장 추진에서 불가피하게 만들어진 결과라고 보는 견해가 있다. 과세상의 몇 가지 문제와 조세포탈 등, 약간의 책임만 해결하면 오히려 삼성으로서는 출자·승계 구도를 완벽하게 합법화하고 법적으로 인정받게 된다.[3]</div>
+    <div class="div_img_local at_img">구체적으로 보면 이건희 일가가 삼성물산 지분 33.26%를 보유하고있으며, 이건희와 삼성물산은 삼성생명의 1, 2대주주이다. 삼성생명은 삼성전자를 비롯한 많은 계열사들의 지분을 가지고 있다. 삼성그룹은 순환출자를 유지해오다가 2018년 모두해소하였다. 순환출자 구조는 1970년대에 시작된 정부 주도하의 대기업 중심의 경제 성장 추진에서 불가피하게 만들어진 결과라고 보는 견해가 있다. 과세상의 몇 가지 문제와 조세포탈 등, 약간의 책임만 해결하면 오히려 삼성으로서는 출자·승계 구도를 완벽하게 합법화하고 법적으로 인정받게 된다.[3]</div>
+<div style="height: 1000px"></div>
+</body>
+</html>

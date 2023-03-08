@@ -1,0 +1,37 @@
+/* 전체 설정 */
+main {
+    width: 550px;
+    height: 600px;
+    border: 1px dotted gray;
+    position: static;
+}
+
+p {
+    border: 3px dotted black;
+    margin-right: 250px;
+    margin-left: 10px;
+    background-color: gray;
+}
+
+/* p1설정 */
+#p_1 {
+    position: static;
+}
+/* p2설정 */
+#p_2 {
+    position: relative;
+}
+/* p3설정 */
+#p_3 {
+    position: relative;
+    top: -40px;
+    left: 100px;
+}
+
+/* fx 설정 */
+#fx {
+    position: fixed;
+    top: 20px;
+    right: 7px;
+    background-color: red;
+}

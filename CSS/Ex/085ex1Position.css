@@ -1,0 +1,52 @@
+main,section,article {
+            padding: 20px;
+        }
+        main {
+            background-color: yellow;
+            height: 1000px;
+        }
+        section {
+            background-color: aqua;
+            /* position: relative; */
+        }
+        article {
+            background-color: blue;
+            height: 2000px;
+        }
+        /* static 문서의 흐름 */
+        /* relative 위치값 지정가능 제외 static과 동일 */
+        /* absolute relative값을 사용한 상위 요소 기준으로 위치 지정 배치 */
+        /* fixed 브라우저 창을 기준으로 위치 지정 */
+        .div_static {
+            background-color: red;
+            /* position: static; */
+        }
+        /* 위치이동 -가능 좌표 생각 */
+        .div_relative {
+            background-color: white;
+            /* position: relative;
+            left: -30px; */
+        }
+        /* absolute로 설정만 주고 위치 지정 안함 아직 block */
+        .div_absolute {
+            background-color: gray;
+            /* position: absolute; */
+        /* (relative 없을 경우)기본 relative인 body기준으로 px움직임 */
+        /* absolute 상위 요소 기준 */
+        top: 30px;
+        }
+        /* position 위치값 %,em,rem 가능 */
+        .div_fixed {
+            background-color: green;
+            /* position: fixed;
+            bottom: 10%;
+            right: 10%; */
+        }
+        .div_sticky {
+            /* sticky 바로 위 부모요소 기준으로 움직임 */
+            /* 상단에 고정할 때 사용 */
+            background-color: beige;
+            position: sticky;
+            top: 0px;
+
+        }
