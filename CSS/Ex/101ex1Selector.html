@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SelectorEx</title>
+    <style>
+        /* 상위요소 하위요소 : 상위요소에 포함된 모든 하위요소에 적용 */
+        header span, #span1{
+            color: aqua;
+        }
+
+        /* 부모요소 > 하위요소 : 부모요소의 자식요소에게만 적용 */
+        header>span {
+            color: blue;
+        }
+
+        span + p {
+            color: blueviolet;
+        }
+
+        /* 형제요소 ~ 형제요소 : 설저된 모든 형제 요소에 적용되는 선택자 */
+        .div3 ~ span {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <span>header - div - span</span>
+        </div>
+        <span id="span1">header - span</span>
+    </header>
+<br>
+<br>
+
+    <main>
+        <div class="div3">
+            <span>header - div - span</span>
+        </div>
+        <span>header - span1</span>
+        <p>p1</p>
+        <span>header - span2</span>
+        <span>header - span3</span>
+    </main>
+</body>
+</html>

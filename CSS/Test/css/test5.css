@@ -1,0 +1,99 @@
+/* 전체 크기 */
+fieldset {
+    width: 420px;
+    height: 390px;
+    margin: 0px auto;
+}
+
+/* 왼쪽에 붙이기 */
+ul li {
+    margin-left: -40px;
+}
+/* 첫 제목 색 */
+legend {
+    font-size: 40px;
+    color: palevioletred;
+    font-weight: bold;
+}
+
+/* 스타일 없애기 */
+li {
+    list-style:none;
+}
+
+/* 별 넣기 */
+li::before {
+    content:'＊';
+    color:pink;
+}
+
+/* 뒷 이미지 */
+.img {
+    background-image: url('./img/사과.jpg');  
+    background-size: cover; 
+}
+
+/* 정렬 */
+.block {
+    float: left;
+}
+
+/* 박스 클릭시 색 표현 */
+input:focus {
+    outline: none;
+    border: 3px solid violet;
+}
+
+textarea:focus {
+    outline: none;
+    border: 3px solid violet;
+}
+
+/* 박스 제목이랑 조금 띄움 */
+textarea {
+    margin-left: 10px;
+}
+
+/* 마우스 오버시 텍스트 표출 오늘 처음봄 깔깔*/
+.out-text {
+    padding: 5px 5px;
+    background-color: #444444;
+    color: #ffffff;
+    display: none;
+    margin-left: 50px;
+    margin-top: -20px;
+}
+
+.out-title:hover + .out-text {
+    display: block;
+}
+
+/* 체크 했을 때 빨간색 (feat.구글링) */
+input[id="cd1"]:checked+label{
+    color: red;
+}
+input[id="cd2"]:checked+label{
+    color: red;
+}
+
+
+/* 박스 배경 투명으로 */
+.bg {
+    background-color: rgba(244, 245, 244, 0.274);
+    border: 1px solid balck;
+}
+
+footer {
+    width: 50px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 3px 3px ;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+}
