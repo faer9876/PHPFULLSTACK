@@ -13,7 +13,7 @@ main {
 body{
     color: white;
     background: url('./img/곰.jpg') repeat-x left bottom fixed;
-    background-color: gray;
+    background-color: rgb(31, 11, 11);
     background-size: cover;
     margin: 0px;
 }
