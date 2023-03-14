@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 가로 flex에서 주축, 세로 교차축 큰 영역 flex의 부모박스 나머지 자식박스*/
+
+        /* flex-direction : 주축과 방향을 지정하는 속성 지정하면 주축의 기준 변경 col row */
+        /* flex-wrap :  여러줄로 표현 nowrap */
+        /* flex-flow :  한번에 여러개 표현  flext-flow: row wrap*/
+        /* justify-content : 주축 방향을 기준으로 해서 정렬  space*/
+        /* align-items :  교차축 기준으로 정렬 */
+        /* align-content : 교차축 기준으로 여러줄일 때 정렬 방법을 지정  flex-start*/
+        /* align-self : 교차축을 기준으로 특정 항목만 정렬 flex*/
+        @import url('./css/122ex1_2.css') all and (max-width:600px);
+        
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .flex_container {
+            background-color: gray;
+            margin: 10px;
+            width: 70vw;
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: flex-start;
+            
+        }
+        .flex_item {
+            border: 1px solid black;
+            width: 20vw;
+            height: 20vh;
+            background-color: aqua;
+        }
+        /* .item_3 {
+            align-self: center;
+        } */
+    </style>
+</head>
+<body>
+    <div class="flex_container">
+        <div class="flex_item">1</div>
+        <div class="flex_item">2</div>
+        <div class="flex_item item_3">3</div>
+        <div class="flex_item">4</div>
+        <div class="flex_item">5</div>
+    </div>
+</html>

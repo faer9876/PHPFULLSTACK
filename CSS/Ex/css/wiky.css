@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+[class *= con] {
+    margin: 10px;
+    width: 80vw;
+    height: 50vh;
+    border: 1px solid black;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+}
+
+[class *= it] {
+    width: 75vw;
+    height: 10vh;
+    border: 1px solid black;
+    margin: 10px;
+    margin-top: 50px;
+}
+
+{}
