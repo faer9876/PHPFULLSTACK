@@ -90,8 +90,11 @@ CREATE TABLE dept_manager_2(
 	,FOREIGN KEY(emp_no) REFERENCES employees_2(emp_no)
 );
 
-ALTER table dept_manager_2 
-MODIFY CONSTRAINT FK_6 FOREIGN KEY(dept_no) REFERENCES dept_manager_2(dept_no);
+
+
+ALTER TABLE dept_manager_2 ADD CONSTRAINT FK_6_2 
+FOREIGN KEY(dept_no) REFERENCES departments_2(dept_no)
+
 
 INSERT INTO titles_2(
 	emp_no
@@ -107,7 +110,7 @@ VALUES (
 );
 COMMIT;
 
-ROLLBACK;
+ROLLBACK
 
 ALTER TABLE salaries_2 ALTER COLUMN salary INT(4000);
 
