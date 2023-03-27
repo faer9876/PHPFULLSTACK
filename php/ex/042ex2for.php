@@ -5,6 +5,6 @@ for($j=2;$j<10;$j++){
         $result=$i." * ".$j." = ".$i*$j;
         echo $result."\n";
     }
-    echo "\n";
+    echo "\n"; 
 }
 ?>
