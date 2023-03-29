@@ -74,23 +74,31 @@
     //     }
     // }
 
+    //num값 만큼 별 출력
     function print_star($num){
         for($i=1;$i<=$num;$i++){
             echo "*";
         }
     }
+
+    //삼각형으로 출력
     function show_star($num){
-        for($k=0;$k<=$num;$k++){
+        for($k=1;$k<=$num;$k++){
             echo print_star($k);
             echo "\n";
         }
     }
+
+    //num 값 만큼 일렬로 출력
     function show_star2($num){
-        for($k=0;$k<$num;$k++){
+        for($p=1;$p<=$num;$p++){
             echo print_star($num)."\n";
         }
     }
 
-echo show_star($num_of_star);
-echo show_star2($num_of_star);
+echo "삼각형으로 표시하면\n";
+show_star($num_of_star);
+echo "-----------------\n";
+echo "일렬로 표시하면\n";
+show_star2($num_of_star);
 ?>
