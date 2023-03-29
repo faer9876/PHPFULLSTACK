@@ -68,7 +68,7 @@
 
     foreach($arr_ass as $key=> $val){
         if($val=="값값"){
-            unset($arr_ass["삭제"]);
+            Unset($key);
         }else{
         echo $key.":".$val."\n";}
     }
