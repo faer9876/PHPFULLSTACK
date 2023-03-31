@@ -1,0 +1,25 @@
+/* 전체 페이지에 대한 스타일 */
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f2f2f2;
+}
+
+/* 헤더에 대한 스타일 */
+header {
+	background-color: #fff;
+	padding: 10px;
+	box-shadow: 0px 0px 10px #888;
+}
+
+/* 메인 영역에 대한 스타일 */
+main {
+	margin: 20px auto;
+	max-width: 1200px;
+}
+
+/* 푸터에 대한 스타일 */
+footer {
+	background-color: #f2f2f2;
+	padding: 10px;
+	box-shadow: 0px 0px 10px #888;
+}
