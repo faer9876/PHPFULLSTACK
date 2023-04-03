@@ -9,14 +9,14 @@
     $dbc = mysqli_connect("localhost", "root", "root506", "employees", 3306);
 
     //쿼리 요청
-    $sql= 
-            "
+    $sql=  "
             SELECT emp_no
             , CONCAT(last_name, ' ', first_name) AS full_name
             , gender
             , birth_date 
             FROM employees 
-            WHERE emp_no <= 10000";
+            WHERE emp_no <= 10000
+            ";
     function fnc_re($dbc,$sql){
         $result_query = mysqli_query($dbc, $sql);
         //결과 출력 mysqli_num_rows이용해서 레코드 수 체크하는 방법
