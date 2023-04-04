@@ -27,13 +27,73 @@
     //         int $param_b
     //리턴 : int $sum
 
-    // 가변 파라미터 ...$param_num
-    function fnc_sum($param_a,$param_b){
-        $sum=$param_a+$param_b;
-        return $sum;
+    // 가변 파라미터 ...$param_numbers
+    // function fnc_sum($param_a,$param_b){
+    //     $sum=$param_a+$param_b;
+    //     return $sum;
+    // }
+    // // return array_sum($param_numbers);
+    // $num1=5;
+    // $num2=6;
+    // echo fnc_sum($num1,$num2);
+
+    //글로벌 변수
+    // function fnc_global(){
+    //     global $global_i;
+    //     $global_i=0;
+    // }
+    // fnc_global();
+    // $global_i=5;
+
+    // echo $global_i;
+
+    //static 변수
+    // function fnc_static(){
+    //     static $static_i =0;
+    //     echo $static_i;
+    //     $static_i++;
+    // }
+    
+    // fnc_static();
+
+    // function fnc_reference(&$param_str){
+    //     $param_str = "fnc_reference";
+    // }
+    // $str = "aaa";
+    // fnc_reference($str);
+    // echo $str
+
+    // function fnc_mul($i){
+    //     for($x=1;$x<=9;$x++){
+    //         echo "$i x $x = ", $i * $x,"\n";
+    //     }
+    // }
+
+    // $n=3;
+    // echo $n."단 =\n";
+    // fnc_mul($n);
+
+    //*
+    //** 
+    //***
+    //****
+    //*****
+    //함수를 하나 만들고, 호출하여 별찍기
+
+    function make_star($s){
+        for($i=1;$i<=$s;$i++){
+            echo "*";
+        }
+        echo "\n";
     }
 
-    $num1=5;
-    $num2=6;
-    echo fnc_sum($num1,$num2);
+    function print_star($d){
+        for($j=1;$j<=$d;$j++){
+            echo make_star($j);
+        }
+    }
+
+    $num=5;
+    print_star($num);
+
 ?>

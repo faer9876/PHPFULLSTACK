@@ -10,12 +10,6 @@ function db_get_pdo()
     $db_pw = "root506";
     $dsn = "mysql:host=$host;port=$port;dbname=$dbname;charset=$charset";
     $pdo = new PDO($dsn, $username, $db_pw);
-    $db_option   = array(
-        PDO::ATTR_EMULATE_PREPARES    => false //DB의 prepared statement 기능을 사용하도록 설정
-        ,PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION //PDO Exception을 Thorws 하도록 설정
-        ,PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC // 연상배열로 Fetch를 하도록 설정  
-    );
-    $param_conn = new PDO( $db_dns, $db_user, $db_password, $db_option );
     return $pdo;
 }
 
