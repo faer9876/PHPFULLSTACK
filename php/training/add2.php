@@ -80,20 +80,45 @@
     //*****
     //함수를 하나 만들고, 호출하여 별찍기
 
-    function make_star($s){
+
+
+
+    /************************
+    파일명 :            
+    시스템명 :
+    이력
+        v001 : new  - kim
+        v002 : (무엇을 바꿨는지)
+    *************************/
+    // function make_star($s){ v002 파라미터 추가
+    function make_star($s,$d="?"){
         for($i=1;$i<=$s;$i++){
-            echo "*";
+            // echo "*"; v002 별 기록 수정
+            echo $d;
         }
         echo "\n";
     }
 
-    function print_star($d){
-        for($j=1;$j<=$d;$j++){
-            echo make_star($j);
-        }
-    }
+    // function make_str($param_str="*"); // 파라미터를 제어하는 다른 기술 없을 시에 위에 것으로 대체
 
-    $num=5;
-    print_star($num);
+    make_star(3);
+    make_star(2,"ㄱ");
+    make_star(1,"ㄱ");
+    
+    // 위 함수를 내가 원하는 문자로 찍고 싶다는 요청이 왔습니다.
+
+    // make_star(3);
+    // make_star(1);
+    // make_star(2);
+    // make_star(1);
+
+    // function print_star($d){
+    //     for($j=1;$j<=$d;$j++){
+    //         echo make_star($j);
+    //     }
+    // }
+
+    // $num=5;
+    // print_star($num);
 
 ?>
