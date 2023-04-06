@@ -51,6 +51,13 @@
                 if (!empty($this->deck)){    
                     $card = array_pop($this->deck);
                     array_push($this->player["cards"],$card);
+                    if($card=="A0"&&"A1"&&"A2"&&"A3"){
+                        if($this->player["score"] <= 10){
+                            $card["value"]=11;
+                        }else{
+                            $card["value"]=1;
+                        }
+                    }
                     $this->player["score"] += $card["value"];
 
                     foreach($this->player["cards"] as $cad){
@@ -59,12 +66,12 @@
                         $str=implode(" ",$cad);
                         
                     }
-                    if(!is_null($this->playerDeck)){
-                        $str=implode(" ",$cad);
-                        if(strpos($str,$this->ACE)===true){
-                            $this->usingAce();
-                        }
-                    }
+                    // if(!is_null($this->playerDeck)){
+                    //     $str=implode(" ",$cad);
+                    //     if(strpos($str,$this->ACE)===true){
+                    //         $this->usingAce();
+                    //     }
+                    // }
                 }
                 if(empty($this->deck)){
                     echo "덱이 비었습니다.\n";
@@ -83,8 +90,9 @@
                     echo "Player bust!!"."\n";
                     echo "\n";
                     $this->restart();
-                }else if($this->dealer["score"]!==21 && $this->player["score"]==21){
+                }else if($this->dealer["score"]!=21 && $this->player["score"]==21){
                     echo "Player win!!"."\n";
+                    $this->restart();
                 }
             }
 
@@ -98,6 +106,13 @@
                 if($this->dealer["score"]<17){
                     $card = array_pop($this->deck);
                     array_push($this->dealer["cards"],$card);
+                    if($card=="A0"&&"A1"&&"A2"&&"A3"){
+                        if($this->dealer["score"] <= 10){
+                            $card["value"]=11;
+                        }else{
+                            $card["value"]=1;
+                        }
+                    }
                     $this->dealer["score"] += $card["value"];
 
                     foreach($this->dealer["cards"] as $cad){
@@ -127,8 +142,9 @@
                         echo "Dealer bust!!"."\n";
                         echo "\n";
                         $this->restart();
-                    }else if($this->dealer["score"]==21 && $this->player["score"]!==21){
+                    }else if($this->dealer["score"]==21 && $this->player["score"]!=21){
                         echo "Dealer win!!"."\n";
+                        $this->restart();
                     }
                 }
         
@@ -185,10 +201,13 @@
                     for($i=0;$i<$ace;$i++){
                         if($this->player["value"]<=10){
                             $this->player["value"]+=11;
-                        }else{
+                        }else if($this->player["value"]>10){
                             $this->player["value"]+=1;
+                        }else if($this->dealer["value"<=10]){
+                            $this->dealer["value"]+=11;
+                        }else if($this->dealer["valuer"]>10){
+                            $this->dealare["value"]+=1;
                         }
-                        return $this->player["value"];
                     }
                 }
 
