@@ -51,7 +51,7 @@
                 if (!empty($this->deck)){    
                     $card = array_pop($this->deck);
                     array_push($this->player["cards"],$card);
-                    if($card=="A0"&&"A1"&&"A2"&&"A3"){
+                    if($card=="A0"||"A1"||"A2"||"A3"){
                         if($this->player["score"] <= 10){
                             $card["value"]=11;
                         }else{
@@ -61,10 +61,7 @@
                     $this->player["score"] += $card["value"];
 
                     foreach($this->player["cards"] as $cad){
-                        // array_push($this->playerDeck, $cad);
-                        // var_dump($cad)
                         $str=implode(" ",$cad);
-                        
                     }
                     // if(!is_null($this->playerDeck)){
                     //     $str=implode(" ",$cad);
@@ -113,6 +110,7 @@
                             $card["value"]=1;
                         }
                     }
+                
                     $this->dealer["score"] += $card["value"];
 
                     foreach($this->dealer["cards"] as $cad){
