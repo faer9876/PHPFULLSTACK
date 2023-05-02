@@ -1,0 +1,35 @@
+h1 {
+    color: #f50707;
+    border: solid #fca103;
+    margin-right: 65%;
+    padding: 1px;
+}
+
+h2 {
+    color: #071ff5;
+    border: solid #fca103;
+    margin-right: 87%;
+}
+
+.h2_1{
+    color: #071ff5;
+    border: solid #fca103;
+    margin-right: 91%;
+}
+
+li {
+    color: #0b9c4c;
+    font-weight: bold;
+}
+
+ol {
+    border: solid #fca103;
+    margin-right: 53%;
+}
+
+table, th, td {
+    border:1px solid #000000;
+    border-collapse: collapse;
+    padding: 5px;
+    text-align: center;
+}

@@ -1,0 +1,13 @@
+/* 순서 삭제 */
+ul {
+    list-style: none; 
+}
+/* a tag 표현 */
+a {
+    display: block;
+    padding: 10px 20px;
+    background-color: #eee;
+}
+ul li {
+    float: left;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradation</title>
+    <style>
+        .div_liner {
+            width: 400px;
+            height: 200px;
+            border: 1px solid black;
+            background: linear-gradient(45deg, blue, pink, red 20%, purple);
+        }
+        .div_radial {
+            width: 400px;
+            height: 200px;
+            border: 1px solid black;
+            /* default값 ellipse */
+            /* 입력 좌표로부터 가장 먼 곳으로 뻗어 나가는 그라데이션 farthest-corner */
+            /* 입력 좌표로부터 가장 먼 면으로 뻗어 나가는 그라데이션 farthest-side */
+            /* 입력 좌표가 중심이 되는 그라데이션 closest-corner*/
+            /* 입력 좌표로부터 가장 가까운 면으로 뻗어 나가는 그라데이션 closest-side */
+            background: radial-gradient(circle closest-corner at 10% 20%, aqua, brown);
+        }
+    </style>
+</head>
+<body>
+    <h2>선형 그라데이션</h2>
+    <div class="div_liner"></div>
+    
+    <h2>원형탈모 그라데이션</h2>
+    <div class="div_radial"></div>
+</body>
+</html>

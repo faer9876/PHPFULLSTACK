@@ -1,0 +1,43 @@
+nav {
+    width: 800px;
+    height: 800px;
+    color: black;
+}
+
+ul li {
+    text-align: center;
+    float: left;
+    list-style: none;
+    background-color: gray;
+    box-shadow: 5px 5px 5px;
+}
+
+a:visited {
+    color: black;
+}
+
+li {
+    padding: 10px;
+}
+
+li:not(.a1){
+    border-left: 1px solid black;
+}
+
+a:hover{
+    background-color: #b30000;
+    color: #fff;
+}
+
+li:not(.a6) a:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+
+

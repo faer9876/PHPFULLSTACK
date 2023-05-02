@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h1 {
+	text-align: center;
+}
+
+#wrap {
+	text-align: center;
+}
+
+#color {
+	width: 300px;
+	height: 300px;
+	border: 1px solid black;
+	margin: 0px auto;
+}
+
+#red:checked~div{
+background-color:red;
+}
+#blue:checked~div{
+background-color:blue;
+}
+#green:checked~div{
+background-color:green;
+}
+
+</style>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>div색 변경</h1>
+	<form>
+		<div id="wrap">
+			빨강<input type="radio" name="check" id="red">
+			파랑<input type="radio" name="check" id="blue">
+			초록<input type="radio" name="check" id="green">
+
+			<div id="color"></div>
+		</div>
+	</form>
+</body>
+</html>

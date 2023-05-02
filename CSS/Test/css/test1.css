@@ -1,0 +1,81 @@
+/* 전체 */
+section {
+    width: 830px;
+    height: 650px;
+    border: 1px solid black;
+    margin: 0px auto;
+    float: none;
+}
+
+/* 글씨 크기 줄이기 */
+p {
+    font-size: 13px;
+}
+
+/* article 전체 박스 선, padding, margin 지정 */
+article {
+    border: 1px dotted gray;
+    padding: 10px;
+    margin: 10px;
+    position: relative;
+}
+
+/* 첫번째 요소 넓이랑 위치 지정 */
+.at1 {
+    width: 350px;
+    height: 200px;
+    float: left;
+    position: relative;
+    top: 10px;
+    left: 3px;
+}
+
+/* 두번째 요소 넓이랑 위치 지정 */
+.at2 {
+    width: 350px;
+    height: 200px;
+    float: left;
+    position: relative;
+    top: 10px;
+}
+
+/* 세번째 요소 넓이랑 위치 지정 */
+.at3 {
+    width: 350px;
+    height: 200px;
+    float: left;
+    top: 10px;
+    position: relative;
+    top: 10px;
+}
+
+/* 네번째 요소 넓이랑 위치 지정 */
+.at4 {
+    width: 350px;
+    height: 200px;
+    float: left;
+    top: 10px;
+    position: relative;
+    top: 10px;
+    left: 3px;
+}
+
+/* footer 위치 고정, 크기, 색지정 */
+footer {
+    position: fixed;
+    clear: both;
+    bottom: 470px;
+    background-color: black;
+    width: 810px;
+    height: 50px;
+    color: orange;
+    text-align: center;
+}
+@media (max-width:600px){ /*가로 너비가 600px 이하일 때 아래 스타일 적용*/
+    #main {
+        display: block;
+    }
+    #main .p {
+        min-height: 0;
+    }
+}

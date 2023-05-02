@@ -1,0 +1,19 @@
+span {
+    font-weight: bold;
+}
+
+main {
+    background-color: gray;
+    color: white;
+    font-size: 10px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+body{
+    color: white;
+    background: url('./img/곰.jpg') repeat-x left bottom fixed;
+    background-color: rgb(31, 11, 11);
+    background-size: cover;
+    margin: 0px;
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            순서 지켜야함
+            :link : 단 한번도 방문한적 없는 경우 
+            :visited : 방문 한적이 있는 요소에만 스타일 적용
+            :hover : 마우스 포인터를 요소 위에 올렸을 때 스타일을 적용
+            :active : 활성화한 요소에 스타일 적용
+
+            :focus : 포커스를 받은 요소에 스타일을 적용
+            :targer : 앵커 대상에 스타일을 적용
+
+            :nth-child(n) : n번째 자식 요소에 스타일 적용
+            A:nth-of-type() : A타입에 특정값 요소에 스타일 적용 
+            :not(selector) : sele값 제외 요소에 스타일 적용  
+
+
+            ::first-letter :
+            ::first-line :
+            ::before :
+            ::after :
+            ::selection :
+
+        */
+
+        nav ul li {
+            float: left;
+            padding: 10px;
+            width: 100px;
+            list-style: none;
+            background-color: black;
+            text-align: center;
+        }
+
+        a:link {
+            color: aqua;
+            text-decoration: none;
+            padding: 10px;
+        }
+        a:visited {
+            color: greenyellow;
+        }
+        a:hover {
+            background-color: crimson;
+        }
+        input:focus {
+            outline: none;
+            border: 3px solid violet;
+        }
+        a:active {
+            background-color: aqua;
+        }
+        #target_1:target {
+            background-color: burlywood;
+        }
+        .img {
+            background-image: url(./css/img/곰.jpg);
+            background-size: 100%;
+        }
+        /* div :nth-child(1) {
+            background-color: yellow;
+        }
+        div h2:nth-of-type(2) {
+            background-color: green;
+        } */
+        div :not(){
+            background-color: aquamarine;
+        }
+        .container_2 .pf_1::first-letter {
+            background-color: blueviolet;
+        }
+        .container_2 .pf_2::first-line {
+            background-color: gray;
+        }
+        .pf_1>span::before {
+            content: '중요';
+            color: red;
+        }
+        .pf_2>span::after {
+            content: '중요';
+            color: red;
+        }
+        .container_2 p::selection {
+            background-color: deeppink;
+        }
+    </style>
+</head>
+<body>
+
+    <fieldset>
+        <legend>가상 요소</legend>
+        <div class="container_2">
+            <h2>h2_1</h2>
+            <p class="pf_1">나무위키 ( namuwiki )는 파라과이 <span>소재의 Umanle S.R.L.이 운영하는 영리 목적의 위키 웹사이트이다.</span> 리그베다 위키의 2015년 4월 11일자 데이터베이스를 기반으로 같은 해 4월 17일 시작되었다. 2022년 1월 20일 통계에 따르면 대략 총 400만 개의 문서가 수록되어 있으며,</p>
+            <p class="pf_2">나무위키 ( namuwiki )는 파라과이 <span>소재의 Umanle S.R.L.이 운영하는 영리 목적의 위키 웹사이트이다.</span> 리그베다 위키의 2015년 4월 11일자 데이터베이스를 기반으로 같은 해 4월 17일 시작되었다. 2022년 1월 20일 통계에 따르면 대략 총 400만 개의 문서가 수록되어 있으며,</p>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>구조 가상 클래스</legend>
+        <div class="container">
+            <h2>h2_1</h2>
+            <p>p_1</p>
+            <p>p_2</p>
+            <h2>h2_2</h2>
+            <p>p_3</p>
+        </div>
+    </fieldset>
+    <nav>
+        <a href="http://www.naver.com">Naver</a>
+        <ul>
+            <li><a href="#target_1" class="img">선택1</a></li>
+            <li><a href="#"> 선택2</a></li>
+            <li><a href="#"> 선택3</a></li>
+            <li><a href="#"> 선택4</a></li>
+        </ul>
+    </nav>
+    <br>
+    <br>
+    <br>
+    
+    <form>
+        <span id="target_1">target 테스트</span> 
+        <br>
+        <br>
+            <label for="input_1">ID</label>
+            <input type="text" name="text" id="input_1" maxlength="10" minlength="3" placeholder="3~10자 아이디">
+        <br>
+            <label for="input_2">PW</label>
+            <input type="text" name="text" id="input_2" maxlength="10" minlength="3" placeholder="3~10자 비밀번호">
+        <br><br>
+            <input type="button" value="제출">
+            <input type="reset" value="초기화">
+        <br>
+            <label for="sel"></label>
+            <input type="radio" id="" name="">
+            <input type="radio" id="" name="">
+            <input type="radio" id="" name="">
+
+    </form>
+</body>
+</html>

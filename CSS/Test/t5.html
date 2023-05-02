@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/test5.css">
+</head>
+<body>
+    <form action="">
+        <main>
+            <fieldset class="img">
+                <legend>I want YOU!</legend>
+                <ul>
+                    <li>
+                        <label for="name">이름</label>
+                        <input type="text" required class="bg" id="name">
+                    </li>
+<br>
+                    <li>
+                        <label for="age">나이</label>
+                        <input type="number" required class="bg" max="20" id="age">
+                    </li>
+<br>
+                    <li>
+                        <label for="sele">성별</label>
+                        <input type="radio" id="cd1" required name="se" >
+                        <label for="cd1" >남자</label>
+                        <input type="radio" id="cd2" name="se">
+                        <label for="cd2">여자</label>
+                    </li>
+                </ul>
+                <label class="block" for="요청사항"><span style="font-weight: bold;">요청사항</span></label>
+                
+                <textarea name="요청사항" id="요청사항" style="border: 1px solid balck; background: transparent;" cols="30" rows="10" placeholder="요청 사항 입력"></textarea>
+<br>
+                <a href="http://127.0.0.1:5500/CSS/Test/error.html" class="out-title"><footer>보내기</footer></a>
+                <div class="out-text">
+                    <p>내용을 다시 한 번 확인해 주세요.</p>
+                </div>
+            </fieldset>
+        </main>
+</form>
+</body>
+</html>

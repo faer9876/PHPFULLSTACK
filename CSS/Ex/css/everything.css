@@ -1,0 +1,45 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap');
+        html {
+            font-family: 'Tilt Prism', cursive;
+            /* 굴림이 없을시 바탕 적용 */
+            font-family: '굴림','바탕';
+        }
+    body {
+        font-family: 'Tilt Prism', cursive;
+
+    }
+        /* 적확한 픽셀 수를 파악하기 힘들어서 사용x */
+        .p1 {
+            font-size: medium;
+        }
+        .p2 {
+            font-size: xx-small;
+        }
+        .p3 {
+            font-size: xx-large;
+        }
+        /* 최상위 요소의 크기를 조정할 때만 px 사용 */
+        .p1_px {
+            font-size: 20px;
+        }
+        /* 부모가 가지고 있는 글자크기 대비 몇배로 할것인지 */
+        .p2_em {
+            font-size: 2em;
+        }
+        /* 최상위 요소의 배율 ex 현재의 최상위는 html */
+        .p3_rem {
+            font-size: 2rem;
+        }
+        div {
+            font-size: 16px;
+        }
+        .p1_weight {
+            font-weight: 100 /* normal 기본값  400*/;
+        }
+        .p2_weight {
+            font-weight: 400 ;
+        }
+        .p3_weight {
+            font-weight: 900 ;
+        }
