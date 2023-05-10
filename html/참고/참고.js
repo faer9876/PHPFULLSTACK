@@ -68,7 +68,7 @@ function makeCalendar(year,mon,dayCount){
         listPre.classList.add('disabled');
         Day.appendChild(listPre);
     }
-   
+
     for(let i=1; i<=dayCount; i++){
         if(i===currentDay&&year===currentYear&&mon===currentMon){
             //선택한 년, 월, 일 다를 때 현재 날짜에 검은색 테두리
@@ -267,7 +267,7 @@ add.addEventListener('click',(event)=>{
 
 input.addEventListener('keypress',(event)=>{
     if(event.key==='Enter'){
-       addToDoList();
+        addToDoList();
     }
 });
 
@@ -291,7 +291,7 @@ allReset.addEventListener('click',()=>{
 todoList.addEventListener('click',(event)=>{
     if(event.target.className==='far fa-minus-square'){
         console.log("a: "+event.target.parentNode.parentNode.textContent);
-             
+    
         const YMD = year+'-'+mon+'-'+DayOfChoice;
         
         if(localStorage.getItem(YMD).includes(',')){
