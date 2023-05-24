@@ -15,7 +15,7 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/', function () { //method get
-    return view('welcome');
+    return view('board_list');
 });
 
 
@@ -51,7 +51,6 @@ Route::get('/home', function () {
 Route::get('/method', function () {
     return 'GET Meothod!~';
 });
-
 
 
 //post 요청에 대한 처리
@@ -171,14 +170,40 @@ Route::get('/sign', function(){
 // 컨트롤러
 //-------------------------------
 // 커맨드로 컨트롤러 생성 : php artisan make:controller '이름'
-use App\Http\Controllers\TestController;
-Route::get('/test',[TestController::class, 'index'])->name('tests.inex');
+// use App\Http\Controllers\TestController;
+// Route::get('/test',[TestController::class, 'index'])->name('tests.inex');
 
 
 //커멘드로 컨트롤러 생성 : php artisan make:controller 'name'
 
-use App\Http\Controllers\TasksContorller;
-Route::resource('/tasks', TasksContorller::class);
+// use App\Http\Controllers\TasksContorller;
+// Route::resource('/tasks', TasksContorller::class);
 
-use App\Http\Controllers\BladeController;
-Route::get('blade',[BladeController::class,'index'])->name('blade.index');
+// use App\Http\Controllers\BladeController;
+// Route::get('blade',[BladeController::class,'index'])->name('blade.index');
+
+use App\Http\Controllers\BoardController;
+Route::get('/',[BoardController::class,'index'])->name('board_list.index');
+
+
+// Route::get('/boardlist', function () {
+//     return view('boardlist');
+// });
+
+Route::get('/board_update',[BoardController::class,'edit'])->name('board_update.edit');
+
+// Route::get('/board_update', function () {
+//     return view('board_update');
+// });
+
+Route::get('/board_detail',[BoardController::class,'show'])->name('board_detail.show');
+
+// Route::get('/board_detail', function () {
+//     return view('board_detail');
+// });
+
+Route::get('/board_insert',[BoardController::class,'store'])->name('board_insert.store');
+
+// Route::get('/board_insert', function () {
+//     return view('board_insert');
+// });
