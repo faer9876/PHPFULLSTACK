@@ -185,24 +185,25 @@ Route::get('/sign', function(){
 use App\Http\Controllers\BoardController;
 Route::get('/',[BoardController::class,'index'])->name('board_list.index');
 
+Route::resource('/board', BoardController::class);
 
 // Route::get('/boardlist', function () {
 //     return view('boardlist');
 // });
 
-Route::get('/board_update',[BoardController::class,'edit'])->name('board_update.edit');
+// Route::get('/board_update',[BoardController::class,'edit'])->name('board_update.edit');
 
 // Route::get('/board_update', function () {
 //     return view('board_update');
 // });
 
-Route::get('/board_detail',[BoardController::class,'show'])->name('board_detail.show');
+// Route::get('/board_detail',[BoardController::class,'show'])->name('board_detail.show');
 
 // Route::get('/board_detail', function () {
 //     return view('board_detail');
 // });
 
-Route::get('/board_insert',[BoardController::class,'store'])->name('board_insert.store');
+// Route::get('/board_insert',[BoardController::class,'store'])->name('board_insert.store');
 
 // Route::get('/board_insert', function () {
 //     return view('board_insert');

@@ -81,11 +81,17 @@
             </tr>
         </thead>
         <tbody>
+            @foreach ($board as $value)
+                <span>{{ 'board_no : '.$value->board_no }}</span>
+                <tr>
+                    <td>{{ $value->board_no }}</td>
+                    <td> <a href="">{{ $value->board_title }}</a></td>
+                    {{-- <td>{{ $value->board_writedate }}</td> --}}
+                </tr>
+            @endforeach
         </tbody>
     </table>
-    @foreach ($board as $value)
-        <span>{{ 'board_no : '.$value->board_no }}</span>
-    @endforeach
+
 </body>
 
 </div>

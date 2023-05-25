@@ -50,7 +50,7 @@ class BoardController extends Controller
      */
     public function show($id)
     {
-        return view('board_detail').$id;
+        return view('board_detail');
     }
 
     /**
