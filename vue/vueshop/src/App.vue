@@ -17,6 +17,8 @@
       {{ item.price }}
     </p>
   </div>
+
+  <p v-if="1==1">if문 테스트</p>
 </template>
 
 <script>
