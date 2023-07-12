@@ -1,10 +1,10 @@
 <template lang="">
-    <div class="post" v-for="(data,i) in $store.state.boardData" :key="i">
-        <div class="post-img" :style="{backgroundImage : `url('${data.img}')`}"></div>
+    <div class="post" v-for="data in $store.state.boardData" :key="data">
+        <div class="post-img" :class="data.filter" :style="{backgroundImage : `url('${data.img}')`}"></div>
         <div class="post-content">
-            <p>{{$store.state.boardData[i].likes}} 좋아요</p>
-            <p><strong>{{$store.state.boardData[i].name}}</strong> {{$store.state.boardData[i].content}}</p>
-            <p>{{$store.state.boardData[i].created_at}}</p>
+            <p>{{data.likes}} 좋아요</p>
+            <p><strong>{{data.name}}</strong> {{data.content}}</p>
+            <p>{{data.created_at}}</p>
         </div>
     </div>
 </template>

@@ -7,6 +7,7 @@
         <img src="./assets/logo.png" alt="vue logo" class="logo" />
       </li>
       <li class="header-button header-button-right" v-if="$store.state.tabFlg==1" @click="$store.commit('changeTabFlg',2)">다음</li>
+      <li class="header-button header-button-right" v-if="$store.state.tabFlg==2" @click="$store.dispatch('writeContent')">게시</li>
     </ul>
   </div>
   <!-- {{ $store.state.lastId }} -->
@@ -33,13 +34,14 @@ export default {
     this.$store.dispatch('getMainList');
   },
   methods:{
-    updateImg(e){
+    updateImg(e){//이벤트 내용들 다 투입
       let file = e.target.files;
       let ImgUrl = URL.createObjectURL(file[0]);
       this.$store.commit('changeImgUrl',ImgUrl);
       this.$store.commit('changeTabFlg',1);
+      this.$store.commit('changeFile',file[0]);
       e.target.value='';
-    }
+    },
   },
   components: {
     ConteinerComponent : ConteinerComponent,
